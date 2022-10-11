@@ -32,9 +32,14 @@ namespace GameInterfaces
             {
                 return false;
             }
+
+            if (other.Value == Value)
+            {
+                return true;
+            }
             else
             {
-                return other.Value == this.Value;
+                return false;
             }
         }
 

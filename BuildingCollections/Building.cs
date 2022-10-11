@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GameInterfaces
+namespace BuildingCollections
 {
     public class Building: IHasValue
     {
@@ -22,7 +22,7 @@ namespace GameInterfaces
         public override string ToString()
         {
             //return buildingInfo + buildingArea + buildingValue;
-            return GetType() + string.Format("{0,20} {1,-8:f2} {2,-8:f2} ",Type,Area,Value);
+            return string.Format("{0,-20} {1,8:f2} {2,8:f2} ",Type,Area,Value);
         }
 
         public bool Equals(IHasValue other)
