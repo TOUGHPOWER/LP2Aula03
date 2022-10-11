@@ -19,12 +19,10 @@ namespace GameInterfaces
 
         }
 
-        public string ToString()
+        public override string ToString()
         {
-            string buildingInfo = string.Format("{0,20} ",Type);
-            string buildingArea = string.Format("{0.-8,f2} ",Area);
-            string buildingValue = string.Format("{0.-8,f2} ",Value);
-            return buildingInfo + buildingArea + buildingValue;
+            //return buildingInfo + buildingArea + buildingValue;
+            return GetType() + string.Format("{0,20} {1,-8:f2} {2,-8:f2} ",Type,Area,Value);
         }
 
         public bool Equals(IHasValue other)

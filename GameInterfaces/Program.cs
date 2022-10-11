@@ -16,7 +16,7 @@ namespace GameInterfaces
 
             foreach (IHasValue valuable in valueArray)
             {
-                Console.WriteLine(valuable.GetType().ToString());
+                Console.WriteLine(valuable.GetType().BaseType.ToString());
                 Console.WriteLine(valuable.ToString());
                 Console.WriteLine();
                 

@@ -8,8 +8,8 @@ namespace GameInterfaces
 {
     public interface IHasValue : IEquatable<IHasValue>
     {
-        public float Value{get;}
+        float Value{get;}
 
-        public bool Equals( IHasValue other);
+        
     }
 }
