@@ -6,7 +6,7 @@ namespace CityManager1
     /// <summary>
     /// Test a collection of buildings.
     /// </summary>
-    public class Program
+    public class Program 
     {
         // List of buildings
         private List<Building> buildings;
@@ -200,11 +200,14 @@ namespace CityManager1
         /// </returns>
         private IEnumerable<Building> GetValuableBuildings(int minValue)
         {
-            // /////////////////// //
-            // Implement this code //
-            // /////////////////// //
-            throw new NotImplementedException(
-                "Students should implement this method");
+            List<Building> greatBuldings = new List<Building>();
+            foreach (Building build in buildings)
+            {
+                if(build.Value > minValue)
+                {
+                    yield return build;
+                }
+            }
         }
     }
 }
