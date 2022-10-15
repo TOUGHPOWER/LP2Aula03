@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CityManager1
+namespace CityManager3
 {
     /// <summary>
     /// Test a collection of buildings.
@@ -31,7 +31,7 @@ namespace CityManager1
             // collection initialization syntax
             buildings = new List<Building>() {
                 new Building("Small hut", 1000f, 25f),
-                new Building("Skyscrapper", 15005f, 2700.2f)
+                new Building("Skyscrapper", 1500f, 2700f)
             };
         }
 
@@ -151,6 +151,7 @@ namespace CityManager1
         /// </summary>
         private void ListBuildings()
         {
+            buildings.Sort();
             // Show building list
             Console.WriteLine("==== Building List ====");
             foreach (Building building in buildings)

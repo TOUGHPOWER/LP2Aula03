@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CityManager1
+namespace CityManager3
 {
     public class Building: IHasValue, IComparable<IHasValue>
     {
@@ -11,7 +11,7 @@ namespace CityManager1
         public float Area{get;}
         public float Value{get;} 
 
-        public Building(string type, float area, float value)
+        public Building(string type, float value, float area)
         {
             Type = type;
             Area = area;
@@ -41,6 +41,29 @@ namespace CityManager1
                 return false;
             }
         }
+
+        public int CompareTo(IHasValue other)
+        {
+            if(other == null)
+            return 1;
+
+            if(other.Value == Value)
+            {
+                return 0;
+            }
+            else if(other.Value > Value)
+            {
+                return 1;
+            }
+            else if(other.Value < Value)
+            {
+                return -1;
+            }
+
+            return 1;
+
+        }
+        
 
         
     }
